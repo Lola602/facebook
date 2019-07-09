@@ -19,27 +19,44 @@
     <a href="http://lorempixel.com/">http://lorempixel.com/</a></br>
     <a href="https://www.generatedata.com/">https://www.generatedata.com/</a>
     <h2>Form</h2>
-    <form>
-        <label for="">Add a full name</label></br>
-        <label for="">Add a profile image</label></br>
-        <label for="">Add something about you</label></br>
-        <label for="">Add place where you live</label></br>
-        <label for="">Add hometown</label></br>
-        <label for="">Add a company</label></br>
-        <label for="">Add a college</label></br>
-        <label for="">Add your relationship status</label></br>
-        <label for="">What's on your mind?</label>
+    <form action="" method="post">
+        <label for="fullName">Add a full name: </label><input type="text" name="fullName" value=""><br>
+        <label for="img">Add a profile image: </label><input type="file" name="img" id="img" /><br> 
+        <label for="bio">Add something about you: </label><textarea rows="5" cols="50" name="bio" placeholder="Enter text here..."></textarea><br>
+        <label for="currentCity">Add place where you live: </label><input type="text" name="currentCity" value=""><br>
+        <label for="hometown">Add hometown: </label>
+            <select name="hometown">
+                <option value="montauban">Montauban</option>
+                <option value="st_albans">St. Albans</option>
+                <option value="alhue">Alhué</option>
+                <option value="diegem">Diegem</option>
+                <option value="castelluccio_valmaggiore">Castelluccio Valmaggiore</option>
+                <option value="surrey">Surrey</option>
+                <option value="le_mans">Le Mans</option>
+                <option value="glendon">Glendon</option>
+                <option value="rutigliano">Rutigliano</option>
+                <option value="olen">Olen</option>
+            </select><br>
+        <label for="company">Add a company: </label></label><input type="text" name="company" value=""><br>
+        <label for="college">Add a college: </label><br>
+        <input type="radio" name="college" value="gryffindor">Gryffindor<br>
+        <input type="radio" name="college" value="ravenclaw">Ravenclaw<br>
+        <input type="radio" name="college" value="slytherin">Slytherin<br>
+        <input type="radio" name="college" value="hufflepuff">Hufflepuff<br>
+        <label for="relationshipStatus">Add your relationship status: </label><input type="text" name="relationshipStatus" value=""><br>
+        <label for="post">What's on your mind? </label><textarea rows="5" cols="50" name="post" placeholder="Enter text here..."></textarea><br>
+        <input type="submit" value="Submit">
     </form>
     <h2>User profile content</h2>
-        <div>Full Name</div>
-        <div>Img</div>
-        <div>Bio</div>
-        <div>Current City</div>
-        <div>Hometown</div>
-        <div>Company</div>
-        <div>College</div>
-        <div>Relationship status</div>
-        <div>Post</div>
+        <div>fullName</div>
+        <div>img</div>
+        <div>bio</div>
+        <div>currentCity</div>
+        <div>hometown</div>
+        <div>company</div>
+        <div>college</div>
+        <div>relationshipStatus</div>
+        <div>post</div>
 
     <h2>Data</h2>
     <div>Wesley Finch</div>
