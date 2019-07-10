@@ -45,11 +45,53 @@
             <div>I work at <span>Urna Industries</span>.</div>
             <div>I studied at <span>Gryffindor</span> college.</div>
             <div>I was born in <span>Montauban</span>.</div>
-            <div>I am <span>single</span>.</div>
+            <div>I am <span>single</span>.</div><br>
+            <div>Edit info about you:</div>
+            <form action="" method="post">
+                <label for="fullName">Add a full name: </label><input type="text" name="fullName" value=""><br>
+                <label for="img">Add a profile image: </label><input type="file" name="img" id="img" /><br>
+                <label for="img">Add a cover image: </label><input type="file" name="img" id="img" /><br>
+                <label for="bio">Add something about you: </label><textarea rows="5" cols="50" name="bio"
+                    placeholder="Enter text here..."></textarea><br>
+                <label for="currentCity">Add place where you live: </label><input type="text" name="currentCity" value=""><br>
+                <label for="hometown">Add hometown: </label>
+                <select name="hometown">
+                    <option value="montauban">Montauban</option>
+                    <option value="st_albans">St. Albans</option>
+                    <option value="alhue">Alhué</option>
+                    <option value="diegem">Diegem</option>
+                    <option value="castelluccio_valmaggiore">Castelluccio Valmaggiore</option>
+                    <option value="surrey">Surrey</option>
+                    <option value="le_mans">Le Mans</option>
+                    <option value="glendon">Glendon</option>
+                    <option value="rutigliano">Rutigliano</option>
+                    <option value="olen">Olen</option>
+                </select><br>
+                <label for="company">Add a company: </label></label><input type="text" name="company" value=""><br>
+                <label for="college">Add a college: </label><br>
+                <input type="radio" name="college" value="gryffindor">Gryffindor<br>
+                <input type="radio" name="college" value="ravenclaw">Ravenclaw<br>
+                <input type="radio" name="college" value="slytherin">Slytherin<br>
+                <input type="radio" name="college" value="hufflepuff">Hufflepuff<br>
+                <label for="relationshipStatus">Add your relationship status: </label><input type="text" name="relationshipStatus"
+                    value=""><br>
+                <input type="submit" value="Submit">
+            </form>
         </section>
     </aside>
     <main>
         <section>
+            <article>
+                <h2>Create post</h2>
+                <figure>
+                    <img src="/img/wesley_finch.jpg" alt="Wesley Finch profile picture" height="40" width="40"></img>
+                </figure>
+                <form>
+                    <label for="post">What's on your mind? </label><textarea rows="5" cols="50" name="post"
+                        placeholder="Enter text here..."></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </article>
             <article>
                 <figure>
                     <img src="/img/wesley_finch.jpg" alt="Wesley Finch profile picture" height="40" width="40"></img>
