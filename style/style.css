@@ -59,7 +59,7 @@ article {
  }
 
 /***** HIDE/SHOW ELEMENTS *****/
-span {
+.hide {
     display: none;
 }
 
@@ -118,7 +118,7 @@ article {
  }
 
 /***** HIDE/SHOW ELEMENTS *****/
-span {
+.hide {
     display: block;
 }
 }
