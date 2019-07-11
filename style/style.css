@@ -1,0 +1,36 @@
+/* Common rules */
+body {
+    background-color: #E9EBEE;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+nav { 
+    background-color: #ffffff; 
+    border: 1px solid black; /* !nefunguje! */
+}
+
+ul {
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+/* Nav */
+.fixedNav {
+    background-color: #4267B2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Header */
+
+/* Footer */
+
+
+
+
