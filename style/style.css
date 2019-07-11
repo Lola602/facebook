@@ -1,7 +1,18 @@
-/* Common rules */
+/******** MOBILE ********/
+/***** COMMON RULES *****/
 body {
     background-color: #E9EBEE;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+header, footer {
+    width: 100%;
+}
+
+aside, main {
+    margin: 0 10px 0 10px;
 }
 
 nav { 
@@ -9,17 +20,77 @@ nav {
     border: 1px solid black;
 }
 
+nav a:hover {
+    background-color: #F5F6F7;
+}
+
 ul {
     list-style: none;
-    margin: 5px;
-    padding: 5px;
+    margin: 3px;
+    padding: 3px;
 }
 
 li a {
     text-decoration: none;
+    color: #4267B2;
 }
 
-/* Nav */
+article {
+    border: 1px solid black;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.articles:first-child, 
+.articles:last-child {
+    margin-top: 5px;
+}
+
+/***** HEADER *****/
+/* COVER IMG */
+.coverImgFigCap {
+    font-size: 1rem;
+    color: white;
+}
+
+ .coverImg {
+     height: 315px;
+     width: 851px;
+ }
+
+/***** HIDE/SHOW ELEMENTS *****/
+span {
+    display: none;
+}
+
+/******** TABLETS, STANDART LAPTOPS, BIG SCREENS ********/
+@media only screen and (min-width: 768px) {
+/***** COMMON RULES *****/
+body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+header, aside, main, footer {
+    margin: 0 100px 0 100px;
+}
+
+ul {
+    margin: 5px;
+    padding: 5px;
+}
+
+article {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.articles:first-child, 
+.articles:last-child {
+    margin-top: 10px;
+}
+
+/* ADD FIXED NAV */    
 .fixedNav {
     background-color: #4267B2;
     position: fixed;
@@ -27,10 +98,29 @@ li a {
     width: 100%;
 }
 
-/* Header */
+.fixedNav a:hover {
+    background-color: #3B5CA0;
+}
 
-/* Footer */
+.fixedNav li a {
+    color: #ffffff;
+}
 
+/***** HEADER *****/
+/* COVER IMG */
+.coverImgFigCap {
+    font-size: 1.4rem;
+}
 
+ .coverImg {
+     height: 315px;
+     width: 851px;
+ }
+
+/***** HIDE/SHOW ELEMENTS *****/
+span {
+    display: block;
+}
+}
 
 
