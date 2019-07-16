@@ -2,63 +2,191 @@
 /***** COMMON RULES *****/
 body {
     background-color: #E9EBEE;
+    color: black;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.8rem;
     line-height: 1.2rem;
 }
 
-header, footer {
-    width: 100%;
+h2, h3 {
+    margin-top: 0;
 }
 
-aside, main {
-    margin: 0 10px 0 10px;
+/***** MAIN LAYOUT *****/
+.mainMenu {
+    height: 2.3rem;
+    align-items: center;
+    display: flex;
+}    
+
+.mainMenu .mobileLogo {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 7rem;
 }
 
-nav { 
-    background-color: #ffffff; 
+.logo {
+    display: none;
+}
+
+.mainMenu h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.mainMenu, .underImgMenu, footer, aside, #post-create-form, article {
+    background: white;
     border: 1px solid black;
 }
 
-nav a:hover {
-    background-color: #F5F6F7;
+nav {
+    display: flex; /* definuje flex kontejner */
+    flex-grow: 1; /* všechny děti mají stejné množství místa */
+    justify-content: flex-end; /* zarovná itemy na main axis, flex-end=doprava */
+    align-self: stretch; /* override align-items pro konkrétní item,
+                         zarovná itemy na cross-axis,
+                         strech znamená roztáhnout na celou výšku */
+    padding-right: 2rem;
 }
 
-ul {
+nav ul {
+    display: flex; /* definuje flex kontejner */
     list-style: none;
-    margin: 3px;
-    padding: 3px;
+    padding-left: 0;
+    align-items: stretch; /* zarovná itemy na cross-axis, strech znamená roztáhnout na celou výšku */
+    font-size: 1.2rem;
+    margin: 0;
+    flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
 }
 
-li a {
+nav ul li {
+    padding: 0 1.5rem;
+    align-items: center; /* zarovná itemy na cross-axis, strech znamená na střed */
+    display: flex; /* definuje flex kontejner */
+    flex-direction: column; /* směr v jakým sou flex items zobrazený ve flex conteineru, column=zvrchu dolů */
+    justify-content: center; /* zarovná itemy na main axis, center=na střed */
+}
+
+nav ul li:active {
+    background: #F5F6F7;
+}
+
+nav ul li:hover {
+    background: #e0e3e6;
+}
+
+nav ul li a {
     text-decoration: none;
     color: #4267B2;
 }
 
-article {
-    border: 1px solid black;
-    margin-bottom: 5px;
-    padding: 5px;
+.content {
+    display: flex; /* definuje flex kontejner */
+    flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
 }
 
-.articles:first-child, 
-.articles:last-child {
-    margin-top: 5px;
+aside {
+    margin: 1rem;
+    padding: 1rem;
+    min-width: 15rem;
 }
 
-/***** HEADER *****/
-/* COVER IMG */
+.coverImgFig {
+    margin: 0;
+    position: relative;
+}
+
+.coverImg {
+    height: 167px;
+    width: 450px;
+    margin: 0 auto;
+    display: block;
+}
+
 .coverImgFigCap {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 550px;
 }
 
- .coverImg {
-     height: 167px;
-     width: 450px;
- }
+/***** CREATE POST *****/
+#post-create-form {
+    padding: 1rem;
+    margin: 1rem;
+}
 
-/***** HIDE/SHOW ELEMENTS *****/
+#post-create-form .field {
+    margin-bottom: 0.8rem;
+}
+
+#post-create-form .field input, #post-create-form .field textarea {
+    display: inline-block;
+    width: 60%;
+}
+
+#post-create-form label {
+    display: inline-block;
+    width: 10rem;
+}
+
+#post-create-form .post {
+    display: flex;
+    flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
+    align-items: center; /* zarovná itemy na cross-axis, strech znamená na střed */
+    justify-content: flex-start; /* zarovná itemy na main axis, center=na začátek */
+}
+
+#post-create-form .post figure {
+    margin: 0 7.8rem 0 0;
+}
+
+/***** MAIN CONTENT *****/
+
+article {
+    text-align: justify;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.author {
+    display: flex;
+    flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
+    justify-content: flex-start; /* zarovná itemy na main axis, center=na začátek */
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=shora dolů  */
+    align-items: flex-start; /* zarovná itemy na cross-axis, flex-start znamená shromáždí se nahoře */
+}
+
+.author figcaption h3 {
+    margin: 0;
+}
+
+.author figcaption a:active {
+    background: #F5F6F7;
+}
+
+.author figcaption a:hover {
+    color: #878a8d;
+}
+
+.author figcaption a {
+    text-decoration: none;
+    color: black;
+}
+
+figcaption time {
+    opacity: 0.7;
+    align-self: flex-start;
+}
+
+/***** HIDE/SHOW MENU ITEMS *****/
+
 .hide {
     display: none;
 }
@@ -71,56 +199,72 @@ body {
     line-height: 1.5rem;
 }
 
-header, aside, main, footer {
-    margin: 0 100px 0 100px;
-}
-
-ul {
-    margin: 5px;
-    padding: 5px;
-}
-
-article {
-    margin-bottom: 10px;
-    padding: 10px;
-}
-
-.articles:first-child, 
-.articles:last-child {
-    margin-top: 10px;
-}
-
-/* ADD FIXED NAV */    
-.fixedNav {
-    background-color: #4267B2;
+.mainMenu {
+    background: #4267B2;
+    height: 3rem;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 
-.fixedNav a:hover {
-    background-color: #3B5CA0;
+.mainMenu .logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.8rem 0.8rem 0.8rem 9rem;
+    display: block;
 }
 
-.fixedNav li a {
+.mobileLogo {
+    display: none;
+}
+
+.mainMenu nav ul li a:hover {
+    background: #3B5CA0;
+}
+
+.mainMenu nav ul li a {
     color: #ffffff;
 }
 
-/***** HEADER *****/
-/* COVER IMG */
+aside {
+    margin: 2rem;
+    padding: 2rem;
+    min-width: 15rem;
+}
+
+/***** CREATE POST *****/
+#post-create-form {
+    padding: 2rem;
+    margin: 2rem;
+}
+
+/***** MAIN CONTENT *****/
+article {
+    padding: 2rem;
+    margin: 2rem;
+}
+
+/**** HEADER ****/
+.coverImgFig {
+    margin-top: 3rem;
+}
+
+.coverImg {
+    height: 315px;
+    width: 851px;
+}
+
 .coverImgFigCap {
     font-size: 1.4rem;
 }
 
- .coverImg {
-     height: 315px;
-     width: 851px;
- }
+/***** SHOW ELEMENTS *****/
 
-/***** HIDE/SHOW ELEMENTS *****/
-.hide {
+.show {
     display: block;
 }
-}
+
 
 
