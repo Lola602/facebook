@@ -125,7 +125,7 @@ nav ul li a {
     display: block;
 }
 
-/***** CREATE POST *****/
+/***** CREATE POST, CREATE PROFILE *****/
 #postCreateForm, #profileCreateForm {
     padding: 1rem;
     margin: 1rem;
@@ -144,7 +144,7 @@ nav ul li a {
     width: 60%;
 }
 
-.field label input#radioFormCollege,
+.field label input#gryffindor,
 .field label input#ravenclaw,
 .field label input#slytherin,
 .field label input#hufflepuff {
@@ -173,6 +173,11 @@ article {
     text-align: justify;
     padding: 1rem;
     margin: 1rem;
+}
+
+article .category {
+    font-style: italic;
+    font-size: 0.9rem;
 }
 
 .author {
@@ -274,7 +279,7 @@ nav ul li.active {
     min-width: 15rem;
 }
 
-/***** CREATE POST *****/
+/***** CREATE POST, CREATE PROFILE *****/
 #postCreateForm, #profileCreateForm {
     padding: 2rem;
     margin: 2rem;
@@ -284,6 +289,11 @@ nav ul li.active {
 article {
     padding: 2rem;
     margin: 2rem;
+}
+
+article .category {
+    font-style: italic;
+    font-size: 1.1rem;
 }
 
 /***** HEADER *****/
