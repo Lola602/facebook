@@ -97,7 +97,7 @@ nav ul li a {
     flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
 }
 
-aside {
+.hpAside, .profileAside {
     margin: 1rem;
     padding: 1rem;
     min-width: 15rem;
@@ -132,10 +132,12 @@ aside {
     display: inline-block;
     width: 60%;
 }
-/************JAK oznacit radio field???*********/
-#college .field input {
-    width: 100%;
-    color:blueviolet;
+
+.field label input#radioFormCollege,
+.field label input#ravenclaw,
+.field label input#slytherin,
+.field label input#hufflepuff {
+    width: 70%;
 }
 
 #postCreateForm label, #profileCreateForm label {
@@ -210,6 +212,7 @@ body {
     line-height: 1.5rem;
 }
 
+/***** MAIN LAYOUT *****/
 .mainMenu {
     background: #4267B2;
     height: 3rem;
@@ -244,14 +247,14 @@ body {
     height: 3rem;
 }
 
-aside {
+.hpAside, .profileAside {
     margin: 2rem;
     padding: 2rem;
     min-width: 15rem;
 }
 
 /***** CREATE POST *****/
-#postCreateForm {
+#postCreateForm, #profileCreateForm {
     padding: 2rem;
     margin: 2rem;
 }
@@ -262,7 +265,7 @@ article {
     margin: 2rem;
 }
 
-/**** HEADER ****/
+/***** HEADER *****/
 .coverImgFig {
     margin-top: 3rem;
 }
