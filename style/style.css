@@ -94,7 +94,7 @@ nav ul li a {
 
 .content {
     display: flex; /* definuje flex kontejner */
-    flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
+    flex-direction: column; /* směr v jakým sou flex items zobrazený ve flex conteineru, column=shora dolů */
 }
 
 .hpAside, .profileAside {
@@ -247,6 +247,11 @@ body {
     height: 3rem;
 }
 
+.content {
+    display: flex; /* definuje flex kontejner */
+    flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
+}
+
 .hpAside, .profileAside {
     margin: 2rem;
     padding: 2rem;
@@ -280,6 +285,4 @@ article {
 .show {
     display: block;
 }
-
-
 
