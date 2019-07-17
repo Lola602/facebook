@@ -55,6 +55,13 @@ padding-left: 1rem;
     margin: 1rem;
 }
 
+.underImgMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* když to tam dám, udělá mi to obří hover background přes nav tlačítka underImgMenu */
+}
+
 nav {
     display: flex; /* definuje flex kontejner */
     flex-grow: 1; /* všechny děti mají stejné množství místa */
@@ -176,8 +183,10 @@ article {
 
 figcaption {
     display: flex;
-    flex-direction: column; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=shora dolů  */
+    flex-direction: column; /* směr v jakým sou flex items zobrazený ve flex conteineru, column=shora dolů  */
     align-items: flex-start; /* zarovná itemy na cross-axis, flex-start znamená shromáždí se nahoře */
+    white-space: nowrap;
+    padding-left: 0.5rem;
 }
 
 .author figcaption h3 {
