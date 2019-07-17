@@ -29,6 +29,10 @@ h2, h3 {
     display: none;
 }
 
+.mainMenu nav {
+padding-left: 1rem;
+}
+
 .mainMenu h1 {
     font-size: 1.5rem;
     margin: 0;
@@ -80,7 +84,7 @@ nav ul li {
 }
 
 nav ul li.active {
-    background: #3b4196;
+    background: #cccfd2;;
 }
 
 nav ul li:hover {
@@ -226,6 +230,10 @@ body {
     display: block;
 }
 
+.mainMenu nav {
+    padding-left: 0;
+}
+
 .mobileLogo {
     display: none;
 }
@@ -240,6 +248,10 @@ body {
 
 .underImgMenu, footer {
     height: 3rem;
+}
+
+nav ul li.active {
+    background: #3B5CA0;
 }
 
 .content {
