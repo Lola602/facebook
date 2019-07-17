@@ -79,8 +79,8 @@ nav ul li {
     justify-content: center; /* zarovná itemy na main axis, center=na střed */
 }
 
-nav ul li:active {
-    background: #F5F6F7;
+nav ul li.active {
+    background: #3b4196;
 }
 
 nav ul li:hover {
@@ -180,10 +180,6 @@ figcaption {
     margin: 0;
 }
 
-.author figcaption a:active {
-    background: #F5F6F7;
-}
-
 .author figcaption a:hover {
     color: #878a8d;
 }
@@ -234,13 +230,12 @@ body {
     display: none;
 }
 
-.mainMenu nav ul li a:hover {
+.mainMenu nav ul li:hover {
     background: #3B5CA0;
 }
 
 .mainMenu nav ul li a {
     color: #ffffff;
-    background-color: inherit;
 }
 
 .underImgMenu, footer {
