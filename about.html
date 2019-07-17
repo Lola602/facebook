@@ -13,72 +13,107 @@
 
 <body>
     <header>
-        <div class="mainMenu">
-            <h1>Facebook</h1>
-            <img class="logo" src="images/logo.svg" alt="Facebook logo" />
-            <img class="mobileLogo" src="images/logo_mobile.svg" alt="Facebook logo" />
-            <div class="search">
-                <form>
-                    <input placeholder="Search"></input>
-                </form>
-            </div>
-            <nav>
-                <ul>
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="/about.html">About</a></li>
-                </ul>
-            </nav>
+    <div class="mainMenu">
+        <h1>Facebook</h1>
+        <img class="logo" src="images/logo.svg" alt="Facebook logo" />
+        <img class="mobileLogo" src="images/logo_mobile.svg" alt="Facebook logo mobile" />
+        <div class="search">
+            <form>
+                <input placeholder="Search"></input>
+            </form>
         </div>
-        <figure class="coverImgFig">
-            <img class="coverImg" src="images/cover_img.jpg" alt="Cover image"></img>
-            <figcaption class="coverImgFigCap">Wesley Finch</figcaption>
-        </figure>
-        <nav class="underImgMenu">
+        <nav>
             <ul>
-                <li><a href="">Timeline</a></li>
-                <li><a href="">Create</a></li>
-                <li><a href="">Friends</a></li>
-                <span class="hide">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <figure class="coverImgFig">
+        <img class="coverImg" src="images/cover_img.jpg" alt="Cover image"></img>
+    </figure>
+    <nav class="underImgMenu">
+        <figure>
+            <img src="images/wesley_finch.jpg" alt="Wesley Finch" width="30" height="30" />
+            <figcaption>Wesley Finch</figcaption>
+        </figure>
+        <ul>
+            <li><a href="">Timeline</a></li>
+            <li><a href="">Create</a></li>
+            <li><a href="">Friends</a></li>
+                <span class="hide show">
                     <li><a href="">Photos</a></li>
                     <li><a href="">Archive</a></li>
                     <li><a href="">More</a></li>
                 </span>
-            </ul>
-        </nav>
+        </ul>
+    </nav>
     </header>
     <div class="content">
         <main>
             <section>
-                <div>Edit info about you:</div>
-                <form action="" method="post">
-                    <label for="fullName">Add a full name: </label><input type="text" name="fullName" value=""><br>
-                    <label for="img">Add a profile image: </label><input type="file" name="img" id="img" /><br>
-                    <label for="img">Add a cover image: </label><input type="file" name="img" id="img" /><br>
-                    <label for="bio">Add something about you: </label><textarea rows="5" cols="50" name="bio"
-                        placeholder="Enter text here..."></textarea><br>
-                    <label for="currentCity">Add place where you live: </label><input type="text" name="currentCity"
-                        value=""><br>
-                    <label for="company">Add a company: </label></label><input type="text" name="company" value=""><br>
-                    <label for="college">Add a college: </label><br>
-                    <input type="radio" name="college" value="gryffindor">Gryffindor<br>
-                    <input type="radio" name="college" value="ravenclaw">Ravenclaw<br>
-                    <input type="radio" name="college" value="slytherin">Slytherin<br>
-                    <input type="radio" name="college" value="hufflepuff">Hufflepuff<br>
-                    <label for="hometown">Add hometown: </label>
-                    <select name="hometown">
-                        <option value="montauban">Montauban</option>
-                        <option value="st_albans">St. Albans</option>
-                        <option value="alhue">Alhué</option>
-                        <option value="diegem">Diegem</option>
-                        <option value="castelluccio_valmaggiore">Castelluccio Valmaggiore</option>
-                        <option value="surrey">Surrey</option>
-                        <option value="le_mans">Le Mans</option>
-                        <option value="glendon">Glendon</option>
-                        <option value="rutigliano">Rutigliano</option>
-                        <option value="olen">Olen</option>
-                    </select><br>
-                    <label for="relationshipStatus">Add your relationship status: </label><input type="text"
-                        name="relationshipStatus" value=""><br>
+                <form id="profileCreateForm" action="" method="post">
+                    <h2>Edit info about you</h2>
+                    <div class="field">
+                        <label for="fullName">Add a full name: </label><input id="fullName" type="text" name="fullName" value="">
+                    </div>
+                    <div class="field">
+                        <label for="img">Add a profile image: </label><input type="file" name="img" id="img" />
+                    </div>
+                    <div class="field">
+                        <label for="img">Add a cover image: </label><input type="file" name="img" id="img" />
+                    </div>
+                    <div class="field">
+                        <label for="bio">Add something about you: </label><textarea id="bio" rows="5" cols="50" name="bio"
+                        placeholder="Enter text here..."></textarea>
+                    </div>
+                    <div class="field">
+                        <label for="currentCity">Add place where you live: </label><input id="currentCity" type="text" name="currentCity"
+                        value="">
+                    </div>
+                    <div class="field">
+                    <label for="company">Add a company: </label>
+                        <input id="company" type="text" name="company" value="">
+                    </div>
+                    <div class="field">
+                        <label for="college">Add a college: </label><br>
+                        <input id="college" type="radio" name="college" value="gryffindor">Gryffindor<br>
+                        <input id="college" type="radio" name="college" value="ravenclaw">Ravenclaw<br>
+                        <input id="college" type="radio" name="college" value="slytherin">Slytherin<br>
+                        <input id="college" type="radio" name="college" value="hufflepuff">Hufflepuff<br>
+                    </div>
+                    <div class="field">
+                        <label for="hometown">Add hometown: </label>
+                        <select id="hometown" name="hometown">
+                            <option value="montauban">Montauban</option>
+                            <option value="st_albans">St. Albans</option>
+                            <option value="alhue">Alhué</option>
+                            <option value="diegem">Diegem</option>
+                            <option value="castelluccio_valmaggiore">Castelluccio Valmaggiore</option>
+                            <option value="surrey">Surrey</option>
+                            <option value="le_mans">Le Mans</option>
+                            <option value="glendon">Glendon</option>
+                            <option value="rutigliano">Rutigliano</option>
+                            <option value="olen">Olen</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="relationshipStatus">Add your relationship status: </label><input id="relationshipStatus" type="text"
+                            name="relationshipStatus" value="">
+                    </div>
+                    <div class="field">
+                        <label for="dateOfBirth">Add your date of birth: </label><input id="dateOfBirth" type="date"
+                        name="dateOfBirth" value="">
+                    </div>
+                    <div class="field">
+                        <label for="emailAddress">Add your email address: </label><input id="emailAddress" type="email" name="emailAddress" value="">
+                    </div>
+                    <div class="field">
+                        <label for="changePassword">Change your password: </label><input id="changePassword" type="password" name="changePassword" value="">
+                    </div>
+                    <div class="field">
+                        <label for="confirmPassword">Add your password again: </label><input id="confirmPassword" type="password" name="confirmPassword" value="">
+                    </div>
                     <input type="submit" value="Submit">
                 </form>
             </section>
@@ -94,8 +129,9 @@
                 <div>Now I live in Tregaron.</div>
                 <div>I work at Urna Industries.</div>
                 <div>I studied at Gryffindor college.</div>
-                <div>I was born in Montauban.</div>
-                <div>I am single.</div><br>
+                <div>I was born in Montauban at 3 July 1986.</div>
+                <div>I am single.</div>
+                <div>My email address is lola@email.cz.</div>
             </section>
         </aside>
     </div>

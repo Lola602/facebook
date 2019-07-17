@@ -31,9 +31,12 @@
         </div>
         <figure class="coverImgFig">
             <img class="coverImg" src="images/cover_img.jpg" alt="Cover image"></img>
-            <figcaption class="coverImgFigCap">Wesley Finch</figcaption>
         </figure>
         <nav class="underImgMenu">
+            <figure>
+                <img src="images/wesley_finch.jpg" alt="Wesley Finch" width="30" height="30" />
+                <figcaption>Wesley Finch</figcaption>
+            </figure>
             <ul>
                 <li><a href="">Timeline</a></li>
                 <li><a href="">Create</a></li>
@@ -54,15 +57,15 @@
         </aside>
         <main>
             <div class="timeline">
-                <form id="post-create-form">
+                <form id="postCreateForm" action="" method="post">
                     <h2>Create post</h2>
                     <div class="field">
                         <label for="username">Username</label>
-                        <input type="text" name="username" value="Wesley Finch" readonly/>
+                        <input id="username" type="text" name="username" value="Wesley Finch" readonly/>
                     </div>
                     <div class="field">
                         <label for="category">Category</label>
-                        <select name="category">
+                        <select id="category" name="category">
                             <option value="blue">Blue</option>
                             <option value="green">Green</option>
                             <option value="yellow">Yellow</option>
@@ -71,7 +74,7 @@
                     </div>
                     <div class="field">
                         <label for="title">Title</label>
-                        <input type="text" name="title" />
+                        <input id="title" type="text" name="title" />
                     </div>
                     <div class="field post">
                     <figure>
@@ -138,6 +141,7 @@
                             eleifend
                             nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
                         </div>
+
                     </article>
                     <article>
                         <figure class="author">
@@ -179,6 +183,7 @@
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
+                        <div>Blue</div>
                         <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
                             mattis.
                             Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
@@ -196,6 +201,7 @@
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
+                        <div>Blue</div>
                         <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
                             mattis.
                             Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
@@ -211,6 +217,7 @@
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
+                        <div>Blue</div>
                         <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
                             mattis.
                             Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
