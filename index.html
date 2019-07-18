@@ -8,7 +8,7 @@
     <meta name="author" content="Šárka Řezáčová">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style/normalize.css">
-    <!--jakmile tam přidám bootstrap, přidají se mi pod odkazy podtržítka a trochu mi to změní velikosti písma a layout-->
+    <!--jakmile tam přidám bootstrap, přidají se mi pod odkazy podtržítka a trochu mi to změní velikosti písma a layout, jak se zbavím těch podtržítek?-->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
     <link rel="stylesheet" href="style/style.css">
@@ -44,11 +44,11 @@
                 <li><a href="">Timeline</a></li>
                 <li><a href="">Create</a></li>
                 <li><a href="">Friends</a></li>
-                <span class="hide show">
+                <div class="hide show noMobile">
                     <li><a href="">Photos</a></li>
                     <li><a href="">Archive</a></li>
                     <li><a href="">More</a></li>
-                </span>
+                </div>
             </ul>
         </nav>
     </header>
@@ -96,7 +96,7 @@
                             <figure class="author">
                                 <img src="images/wesley_finch.jpg" alt="Wesley Finch profile picture" height="40" width="40" />
                                 <figcaption>
-                                    <h3 class="username"><a href="">Wesley Finch</a></h3><br>
+                                    <h3 class="username"><a href="">Wesley Finch</a></h3>
                                     <time datetime="3-18">March 18</time>
                                 </figcaption>
                             </figure>
@@ -116,10 +116,10 @@
                     <article>
                         <figure class="author">
                             <img src="images/baxter_anthony.jpg" alt="Baxter Anthony profile picture" height="40" width="40" />
-                                <figcaption>
-                                    <h3 class="username"><a href="">Baxter Anthony</a></h3><br>
-                                    <time datetime="3-18">March 18</time>
-                                </figcaption>
+                            <figcaption>
+                                <h3 class="username"><a href="">Baxter Anthony</a></h3>
+                                <time datetime="3-18">March 18</time>
+                            </figcaption>
                         </figure>
                         <div class="category">Blue</div>
                         <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
@@ -130,7 +130,7 @@
                         <figure class="author">
                             <img src="images/anthony_solomon.jpg" alt="Anthony Solomon profile picture" height="40" width="40" />
                             <figcaption>
-                                <h3 class="username"><a href="">Anthony Solomon</a></h3><br>
+                                <h3 class="username"><a href="">Anthony Solomon</a></h3>
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
@@ -150,7 +150,7 @@
                         <figure class="author">
                             <img src="images/octavius_barber.jpg" alt="Octavius Barber profile picture" height="40" width="40" />
                             <figcaption>
-                                <h3 class="username"><a href="">Octavius Barber</a></h3><br>
+                                <h3 class="username"><a href="">Octavius Barber</a></h3>
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
@@ -163,7 +163,7 @@
                         <figure class="author">
                             <img src="images/mason_dillon.jpg" alt="Mason Dillon profile picture" height="40" width="40" />
                             <figcaption>
-                                <h3 class="username"><a href="">Mason Dillon</a></h3><br>
+                                <h3 class="username"><a href="">Mason Dillon</a></h3>
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
@@ -182,7 +182,7 @@
                         <figure class="author">
                             <img src="images/joel_barns.jpg" alt="Joel Barnes profile picture" height="40" width="40" />
                             <figcaption>
-                                <h3 class="username"><a href="">Joel Barnes</a></h3><br>
+                                <h3 class="username"><a href="">Joel Barnes</a></h3>
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
@@ -200,7 +200,7 @@
                         <figure class="author">
                             <img src="images/josiah_sears.jpg" alt="Josiah Sears profile picture" height="40" width="40" />
                             <figcaption>
-                                <h3 class="username"><a href="">Josiah Sears</a></h3><br>
+                                <h3 class="username"><a href="">Josiah Sears</a></h3>
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
@@ -216,7 +216,7 @@
                         <figure class="author">
                             <img src="images/castor_sheppard.jpg" alt="Castor Sheppard profile picture" height="40" width="40" />
                             <figcaption>
-                                <h3 class="username"><a href="">Castor Sheppard</a></h3><br>
+                                <h3 class="username"><a href="">Castor Sheppard</a></h3>
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
@@ -237,7 +237,7 @@
                         <figure class="author">
                             <img src="images/price_macias.jpg" alt="Price Macias profile picture" height="40" width="40" />
                             <figcaption>
-                                <h3 class="username"><a href="">Price Macias</a></h3><br>
+                                <h3 class="username"><a href="">Price Macias</a></h3>
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
@@ -253,7 +253,7 @@
                         <figure class="author">
                             <img src="images/lee_rasmussen.jpg" alt="Lee Rasmussen profile picture" height="40" width="40" />
                             <figcaption>
-                                <h3 class="username"><a href="">Lee Rasmussen</a></h3><br>
+                                <h3 class="username"><a href="">Lee Rasmussen</a></h3>
                                 <time datetime="3-18">March 18</time>
                             </figcaption>
                         </figure>
@@ -278,15 +278,16 @@
     <footer>
         <nav>
             <ul>
-                <li><a href="">Privacy</a></li>
-                <li><a href="">Cookies</a></li>
-                <span class="hide show">
+                <li class="privacy"><a href="">Privacy</a></li>
+                <li class="cookies"><a href="">Cookies</a></li>
+                <!--phpstorm mi píše, že div ani span tu nejsou dovolené, co tam má být za tag?-->
+                <div class="hide show noMobile">
                     <li><a href="">Impressum/Terms/NetzDG</a></li>
                     <li><a href="">Advertising</a></li>
                     <li><a href="">Ad Choices</a></li>
                     <li><a href="">Cookies</a></li>
                     <li><a href="">More</a></li>
-                </span>
+                </div>
             </ul>
         </nav>
     </footer>

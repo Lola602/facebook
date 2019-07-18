@@ -39,10 +39,30 @@ padding-left: 1rem;
     padding-left: 2rem;
 }
 
-.mainMenu, .underImgMenu, footer, aside, #post-create-form, article, #profileCreateForm {
+.mainMenu,
+.underImgMenu,
+footer,
+aside,
+#post-create-form,
+article,
+#profileCreateForm {
     background: white;
     border: 1px solid black;
 }
+
+.underImgMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*** když dám sem align-items: center, udělá mi to zmenšenej hover background přes nav tlačítka underImgMenu, co s tím můžu dělat? ****/
+    align-items: center;
+}
+
+/*** chtěla bych posunout ul(tu navigaci) na střed toho navu(pod obrázek), jak to můžu udělat? ****/
+.underImgMenu ul {
+    justify-self: center;
+}
+
 
 .underImgMenu, footer {
     height: 2.3rem;
@@ -55,11 +75,15 @@ padding-left: 1rem;
     margin: 1rem;
 }
 
-.underImgMenu {
+/*** chtěla bych zarovnat odkaz privacy a cookies doleva, ale nejde to, jak to můžu udělat? Níže je pokus, ale asi nechápu úplně správně flexbox:/ ***/
+footer .privacy, footer .cookies {
+    justify-self: flex-start;
+}
+
+footer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; /* když to tam dám, udělá mi to obří hover background přes nav tlačítka underImgMenu */
+    flex-direction: column;
+    align-items: center;
 }
 
 nav {
@@ -73,7 +97,7 @@ nav {
 }
 
 nav ul {
-    display: flex; /* definuje flex kontejner */
+    display: flex;
     list-style: none;
     padding-left: 0;
     align-items: stretch; /* zarovná itemy na cross-axis, strech znamená roztáhnout na celou výšku */
@@ -84,9 +108,9 @@ nav ul {
 
 nav ul li {
     padding: 0 1.5rem;
-    align-items: center; /* zarovná itemy na cross-axis, strech znamená na střed */
-    display: flex; /* definuje flex kontejner */
-    flex-direction: column; /* směr v jakým sou flex items zobrazený ve flex conteineru, column=zvrchu dolů */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center; /* zarovná itemy na main axis, center=na střed */
 }
 
@@ -104,11 +128,12 @@ nav ul li a {
 }
 
 .content {
-    display: flex; /* definuje flex kontejner */
-    flex-direction: column; /* směr v jakým sou flex items zobrazený ve flex conteineru, column=shora dolů */
+    display: flex;
+    flex-direction: column;
 }
 
-.hpAside, .profileAside {
+.hpAside,
+.profileAside {
     margin: 1rem;
     padding: 1rem;
     min-width: 15rem;
@@ -126,12 +151,14 @@ nav ul li a {
 }
 
 /***** CREATE POST, CREATE PROFILE *****/
-#postCreateForm, #profileCreateForm {
+#postCreateForm,
+#profileCreateForm {
     padding: 1rem;
     margin: 1rem;
 }
 
-#postCreateForm .field, #profileCreateForm {
+#postCreateForm .field,
+#profileCreateForm {
     margin-bottom: 0.8rem;
 }
 
@@ -151,16 +178,17 @@ nav ul li a {
     width: 70%;
 }
 
-#postCreateForm label, #profileCreateForm label {
+#postCreateForm label,
+#profileCreateForm label {
     display: inline-block;
     width: 10rem;
 }
 
 #postCreateForm .post {
     display: flex;
-    flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
-    align-items: center; /* zarovná itemy na cross-axis, strech znamená na střed */
-    justify-content: flex-start; /* zarovná itemy na main axis, center=na začátek */
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 #postCreateForm .post figure {
@@ -182,14 +210,15 @@ article .category {
 
 .author {
     display: flex;
-    flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
-    justify-content: flex-start; /* zarovná itemy na main axis, center=na začátek */
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 figcaption {
     display: flex;
-    flex-direction: column; /* směr v jakým sou flex items zobrazený ve flex conteineru, column=shora dolů  */
-    align-items: flex-start; /* zarovná itemy na cross-axis, flex-start znamená shromáždí se nahoře */
+    flex-direction: column;
+    align-items: flex-start;
     white-space: nowrap;
     padding-left: 0.5rem;
 }
@@ -264,23 +293,45 @@ body {
     height: 3rem;
 }
 
+.underImgMenu ul div {
+    display: flex;
+    flex-direction: row;
+}
+
+.underImgMenu .noMobile,
+footer .noMobile {
+    display: flex;
+    flex-direction: row;
+}
+
 nav ul li.active {
     background: #3B5CA0;
 }
 
 .content {
-    display: flex; /* definuje flex kontejner */
-    flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
+    display: flex;
+    flex-direction: row;
 }
 
-.hpAside, .profileAside {
+.hpAside,
+.profileAside {
     margin: 2rem;
     padding: 2rem;
     min-width: 15rem;
 }
 
+.coverImgFig {
+    margin-top: 3rem;
+}
+
+.coverImg {
+    height: 315px;
+    width: 851px;
+}
+
 /***** CREATE POST, CREATE PROFILE *****/
-#postCreateForm, #profileCreateForm {
+#postCreateForm,
+#profileCreateForm {
     padding: 2rem;
     margin: 2rem;
 }
@@ -294,16 +345,6 @@ article {
 article .category {
     font-style: italic;
     font-size: 1.1rem;
-}
-
-/***** HEADER *****/
-.coverImgFig {
-    margin-top: 3rem;
-}
-
-.coverImg {
-    height: 315px;
-    width: 851px;
 }
 
 /***** SHOW ELEMENTS *****/
