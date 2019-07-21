@@ -16,9 +16,9 @@
 <body>
     <header>
     <div class="mainMenu">
-        <h1 class="hide show">Facebook</h1>
-        <img class="logo" src="images/logo.svg" alt="Facebook logo" />
-        <img class="mobileLogo" src="images/logo_mobile.svg" alt="Facebook logo mobile" />
+        <h1 class="hide show"><a href="index.html">Facebook</a></h1>
+        <a href="index.html"><img class="logo" src="images/logo.svg" alt="Facebook logo" /></a>
+        <a href="index.html"><img class="mobileLogo" src="images/logo_mobile.svg" alt="Facebook logo mobile" /></a>
         <div class="search">
             <form>
                 <input placeholder="Search"></input>
@@ -27,7 +27,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="/about.html">About</a></li>
+                <li class="active"><a href="about.html">About</a></li>
             </ul>
         </nav>
     </div>
@@ -37,7 +37,7 @@
     <nav class="underImgMenu">
         <figure>
             <img src="images/wesley_finch.jpg" alt="Wesley Finch" width="30" height="30" />
-            <figcaption>Wesley Finch</figcaption>
+            <figcaption><a href="about.html">Wesley Finch</a></figcaption>
         </figure>
         <ul>
             <li><a href="">Timeline</a></li>
@@ -116,8 +116,12 @@
                     </div>
                     <div class="field">
                         <label for="confirmPassword">Add your new password again:</label><input id="confirmPassword" type="password" name="confirmPassword" value="">
-                    </div><br>
-                    <input type="submit" value="Submit">
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Well done!</h4>
+                            <p>You changed your password.</p>
+                        </div>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Submit">
                 </form>
             </section>
         </main>

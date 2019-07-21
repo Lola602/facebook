@@ -25,6 +25,10 @@ h2, h3 {
     margin: 0.5rem 0.5rem 0.5rem 7rem;
 }
 
+.mainMenu .mobileLogo:hover {
+    border: 1px solid black;
+}
+
 .logo {
     display: none;
 }
@@ -54,15 +58,12 @@ article,
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /*** když dám sem align-items: center, udělá mi to zmenšenej hover background přes nav tlačítka underImgMenu, co s tím můžu dělat? ****/
-    align-items: center;
 }
 
-/*** chtěla bych posunout ul(tu navigaci) na střed toho navu(pod obrázek), jak to můžu udělat? ****/
+/*** chtěla bych posunout ul(tu navigaci) na střed toho navu(pod obrázek), udělala sem to paddingem, můžu to nějak udělat flexboxem? ****/
 .underImgMenu ul {
     justify-self: center;
 }
-
 
 .underImgMenu, footer {
     height: 2.3rem;
@@ -73,6 +74,7 @@ article,
     flex-direction: row;
     justify-content: flex-start;
     margin: 1rem;
+    align-items: center;
 }
 
 /*** chtěla bych zarovnat odkaz privacy a cookies doleva, ale nejde to, jak to můžu udělat? Níže je pokus, ale asi nechápu úplně správně flexbox:/ ***/
@@ -127,6 +129,10 @@ nav ul li a {
     color: #4267B2;
 }
 
+a:hover {
+    text-decoration: none; /* když přidám Bootstrap, přidá mi podtžítka, tohle je smaže */
+}
+
 .content {
     display: flex;
     flex-direction: column;
@@ -150,6 +156,17 @@ nav ul li a {
     display: block;
 }
 
+nav[aria-label="breadcrumb"] {
+    justify-content: flex-start;
+}
+
+.breadcrumb-item a {
+    color: #4267B2;
+}
+
+.breadcrumb-item a:hover {
+    color: #3B5CA0;
+}
 /***** CREATE POST, CREATE PROFILE *****/
 #postCreateForm,
 #profileCreateForm {
@@ -195,6 +212,26 @@ nav ul li a {
     margin: 0 7.8rem 0 0;
 }
 
+#postCreateForm .btn-primary,
+#profileCreateForm .btn-primary,
+.card-body .btn-primary {
+    background-color: #4267B2;
+    border-color: #4267B2;
+}
+
+#postCreateForm .btn-primary:hover,
+#profileCreateForm .btn-primary:hover,
+.card-body .btn-primary:hover {
+    background-color: #3B5CA0;
+}
+
+#profileCreateForm .alert-success {
+    margin: 1rem 1rem 1rem 0;
+}
+
+#postCreateForm .alert-danger {
+    margin: 1rem 1rem 1rem 0;
+}
 /***** MAIN CONTENT *****/
 
 article {
@@ -208,11 +245,26 @@ article .category {
     font-size: 0.9rem;
 }
 
+article h4 {
+    display: flex;
+    flex-direction: row;
+}
+
+article h4 span {
+    margin-left: 0.5rem;
+}
+
+/*** overide bootstrapu, je to takto ok? ***/
+.badge-secondary {
+    background-color: #4267B2;
+}
+
 .author {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    margin-left: 0;
 }
 
 figcaption {
@@ -223,15 +275,15 @@ figcaption {
     padding-left: 0.5rem;
 }
 
-.author figcaption h3 {
-    margin: 0;
-}
-
-.author figcaption a:hover {
+figcaption a:hover {
     color: #878a8d;
 }
 
-.author figcaption a {
+h1 a:hover {
+    color: white;
+}
+
+figcaption a, h1 a {
     text-decoration: none;
     color: black;
 }
@@ -241,12 +293,21 @@ figcaption time {
     align-self: flex-start;
 }
 
+.author figcaption h3 {
+    margin: 0;
+}
+
+.card {
+    margin: 1rem ;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
 /***** HIDE/SHOW MENU ITEMS *****/
 
 .hide {
     display: none;
 }
-
 /******** TABLETS, STANDART LAPTOPS, BIG SCREENS ********/
 @media only screen and (min-width: 768px) {
 /***** COMMON RULES *****/
@@ -273,6 +334,10 @@ body {
     display: block;
 }
 
+.mainMenu .logo:hover {
+    border: 1px solid black;
+}
+
 .mainMenu nav {
     padding-left: 0;
 }
@@ -291,6 +356,10 @@ body {
 
 .underImgMenu, footer {
     height: 3rem;
+}
+
+.underImgMenu ul {
+    padding-right: 20rem;
 }
 
 .underImgMenu ul div {
@@ -336,15 +405,36 @@ nav ul li.active {
     margin: 2rem;
 }
 
+#profileCreateForm .alert-success {
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    width: 60%;
+}
+
+/*** jak nastylovat ten alert, aby kopíroval svou šířkou přesně label s inputem nad ním při různých velikostech zobrazení browseru? ***/
+#postCreateForm .alert-danger {
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    width: 79.5%;
+}
+
 /***** MAIN CONTENT *****/
 article {
     padding: 2rem;
     margin: 2rem;
 }
 
+article h4 span {
+    margin-left: 0.3rem;
+}
+
 article .category {
     font-style: italic;
     font-size: 1.1rem;
+}
+
+.card {
+    margin: 1rem 2rem 2rem 2rem ;
+    padding: 2rem;
+    border: 1px solid black;
 }
 
 /***** SHOW ELEMENTS *****/
