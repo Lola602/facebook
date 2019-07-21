@@ -5,223 +5,341 @@
     <meta charset="utf-8">
     <title>Simple facebook</title>
     <meta name="description" content="Simple facebook">
-    <meta name="author" content="Sarka Rezacova">
+    <meta name="author" content="Šárka Řezáčová">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <!--zapnutý bootstrap mi trochu mění layout a velikosti písma-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>
-                <div>Search field</div>
-                <a href="">Home</a>
-                <a href="">Create</a>
-            </li>
-        </ul>
-    </nav>
     <header>
-        <figure>
-        <img src="/img/cover_img.jpg" alt="Cover image" height="" width=""></img>
-        <figcaption>Wesley Finch</figcaption>
+        <div class="mainMenu">
+            <h1 class="hide show"><a href="index.html">Facebook</a></h1>
+            <a href="index.html"><img class="logo" src="images/logo.svg" alt="Facebook logo" /></a>
+            <a href="index.html"><img class="mobileLogo" src="images/logo_mobile.svg" alt="Facebook logo mobile" /></a>
+            <form class="form-inline my-2 my-lg-0 search">
+                <input class="form-control mr-sm-2 searchInput" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            <nav>
+                <ul>
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <figure class="coverImgFig">
+            <img class="coverImg" src="images/cover_img.jpg" alt="Cover image"></img>
         </figure>
-        <nav>
+        <nav class="underImgMenu">
+            <figure>
+                <img src="images/wesley_finch.jpg" alt="Wesley Finch" width="30" height="30" />
+                <figcaption><a href="about.html">Wesley Finch</a></figcaption>
+            </figure>
             <ul>
-                <li><a href="">Timeline</a></li>
-                <li><a href="">About</a></li>
+                <li class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Timeline
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item hoverActive" href="#">Action</a>
+                        <a class="dropdown-item active" href="#">Another action</a>
+                        <a class="dropdown-item disabled" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li><a href="">Create</a></li>
                 <li><a href="">Friends</a></li>
-                <li><a href="">Photos</a></li>
-                <li><a href="">Archive</a></li>
-                <li><a href="">More</a></li>
+                <div class="hide show noMobile">
+                    <li><a href="">Photos</a></li>
+                    <li><a href="">Archive</a></li>
+                    <li><a href="">More</a></li>
+                </div>
             </ul>
         </nav>
     </header>
-    <aside>
-        <section>
-            <h2>Intro</h2>
-            <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-                sociis
-                natoque penatibus et
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+    </nav>
+    <div class="content">
+        <aside class="hpAside">
+            <div class="jumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
             </div>
-            <div>Now I live in <span>Tregaron</span>.</div>
-            <div>I work at <span>Urna Industries</span>.</div>
-            <div>I studied at <span>Gryffindor</span> college.</div>
-            <div>I was born in <span>Montauban</span>.</div>
-            <div>I am <span>single</span>.</div><br>
-            <div>Edit info about you:</div>
-            <form action="" method="post">
-                <label for="fullName">Add a full name: </label><input type="text" name="fullName" value=""><br>
-                <label for="img">Add a profile image: </label><input type="file" name="img" id="img" /><br>
-                <label for="img">Add a cover image: </label><input type="file" name="img" id="img" /><br>
-                <label for="bio">Add something about you: </label><textarea rows="5" cols="50" name="bio"
-                    placeholder="Enter text here..."></textarea><br>
-                <label for="currentCity">Add place where you live: </label><input type="text" name="currentCity" value=""><br>
-                <label for="hometown">Add hometown: </label>
-                <select name="hometown">
-                    <option value="montauban">Montauban</option>
-                    <option value="st_albans">St. Albans</option>
-                    <option value="alhue">Alhué</option>
-                    <option value="diegem">Diegem</option>
-                    <option value="castelluccio_valmaggiore">Castelluccio Valmaggiore</option>
-                    <option value="surrey">Surrey</option>
-                    <option value="le_mans">Le Mans</option>
-                    <option value="glendon">Glendon</option>
-                    <option value="rutigliano">Rutigliano</option>
-                    <option value="olen">Olen</option>
-                </select><br>
-                <label for="company">Add a company: </label></label><input type="text" name="company" value=""><br>
-                <label for="college">Add a college: </label><br>
-                <input type="radio" name="college" value="gryffindor">Gryffindor<br>
-                <input type="radio" name="college" value="ravenclaw">Ravenclaw<br>
-                <input type="radio" name="college" value="slytherin">Slytherin<br>
-                <input type="radio" name="college" value="hufflepuff">Hufflepuff<br>
-                <label for="relationshipStatus">Add your relationship status: </label><input type="text" name="relationshipStatus"
-                    value=""><br>
-                <input type="submit" value="Submit">
-            </form>
-        </section>
-    </aside>
-    <main>
-        <section>
-            <article>
-                <h2>Create post</h2>
-                <figure>
-                    <img src="/img/wesley_finch.jpg" alt="Wesley Finch profile picture" height="40" width="40"></img>
-                </figure>
-                <form>
-                    <label for="post">What's on your mind? </label><textarea rows="5" cols="50" name="post"
-                        placeholder="Enter text here..."></textarea><br>
-                    <input type="submit" value="Submit">
+        </aside>
+        <main>
+            <div class="timeline">
+                <form id="postCreateForm" action="" method="post">
+                    <h2>Create post</h2>
+                    <div class="field">
+                        <label for="username">Username</label>
+                        <input id="username" type="text" name="username" value="Wesley Finch" readonly/>
+                    </div>
+                    <div class="field">
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="cyan">Cyan</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="title">Title</label>
+                        <input id="title" type="text" name="title" />
+                        <div class="alert alert-danger" role="alert">
+                            Title is missing.
+                        </div>
+                    </div>
+                    <div class="field post">
+                    <figure>
+                        <img src="images/wesley_finch.jpg" alt="Wesley Finch profile picture" height="40" width="40" />
+                    </figure>
+                    <textarea rows="5" cols="50" name="post"
+                    placeholder="What's on your mind?"></textarea><br>
+                    </div>
+                    <div class="buttons">
+                        <input class="btn btn-primary" type="reset" value="Cancel">
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                    </div>
                 </form>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/wesley_finch.jpg" alt="Wesley Finch profile picture" height="40" width="40"></img>
-                    <figcaption>Wesley Finch<br><time datetime="3-18">March 18</time></figcaption>
-                </figure> 
-                <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
-                    mattis.
-                    Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
-                    eleifend
-                    nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                <div class="timeline-content">
+                    <article>
+                            <figure class="author">
+                                <img src="images/wesley_finch.jpg" alt="Wesley Finch profile picture" height="40" width="40" />
+                                <figcaption>
+                                    <h3 class="username"><a href="about.html">Wesley Finch</a></h3>
+                                    <time datetime="3-18">March 18</time>
+                                </figcaption>
+                            </figure>
+                        <div class="category">Blue</div>
+                        <h4>Post title <span class="badge badge-secondary">New</span></h4>
+                        <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                            Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                        </div>
+                    </article>
+                    <article>
+                        <figure class="author">
+                            <img src="images/baxter_anthony.jpg" alt="Baxter Anthony profile picture" height="40" width="40" />
+                            <figcaption>
+                                <h3 class="username"><a href="about.html">Baxter Anthony</a></h3>
+                                <time datetime="3-18">March 18</time>
+                            </figcaption>
+                        </figure>
+                        <div class="category">Blue</div>
+                        <h4>Post title</h4>
+                        <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                        </div>
+                    </article>
+                    <article>
+                        <figure class="author">
+                            <img src="images/anthony_solomon.jpg" alt="Anthony Solomon profile picture" height="40" width="40" />
+                            <figcaption>
+                                <h3 class="username"><a href="about.html">Anthony Solomon</a></h3>
+                                <time datetime="3-18">March 18</time>
+                            </figcaption>
+                        </figure>
+                        <div class="category">Blue</div>
+                        <h4>Post title <span class="badge badge-secondary">New</span></h4>
+                        <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                        </div>
+
+                    </article>
+                    <article>
+                        <figure class="author">
+                            <img src="images/octavius_barber.jpg" alt="Octavius Barber profile picture" height="40" width="40" />
+                            <figcaption>
+                                <h3 class="username"><a href="about.html">Octavius Barber</a></h3>
+                                <time datetime="3-18">March 18</time>
+                            </figcaption>
+                        </figure>
+                        <div class="category">Blue</div>
+                        <h4>Post title</h4>
+                        <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                        </div>
+                    </article>
+                    <article>
+                        <figure class="author">
+                            <img src="images/mason_dillon.jpg" alt="Mason Dillon profile picture" height="40" width="40" />
+                            <figcaption>
+                                <h3 class="username"><a href="about.html">Mason Dillon</a></h3>
+                                <time datetime="3-18">March 18</time>
+                            </figcaption>
+                        </figure>
+                        <div class="category">Blue</div>
+                        <h4>Post title</h4>
+                        <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                        </div>
+                    </article>
+                    <article>
+                        <figure class="author">
+                            <img src="images/joel_barns.jpg" alt="Joel Barnes profile picture" height="40" width="40" />
+                            <figcaption>
+                                <h3 class="username"><a href="about.html">Joel Barnes</a></h3>
+                                <time datetime="3-18">March 18</time>
+                            </figcaption>
+                        </figure>
+                        <div class="category">Blue</div>
+                        <h4>Post title <span class="badge badge-secondary">New</span></h4>
+                        <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                            Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                        </div>
+                    </article>
+                    <article>
+                        <figure class="author">
+                            <img src="images/josiah_sears.jpg" alt="Josiah Sears profile picture" height="40" width="40" />
+                            <figcaption>
+                                <h3 class="username"><a href="about.html">Josiah Sears</a></h3>
+                                <time datetime="3-18">March 18</time>
+                            </figcaption>
+                        </figure>
+                        <div class="category">Blue</div>
+                        <h4>Post title</h4>
+                        <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                        </div>
+                    </article>
+                    <article>
+                        <figure class="author">
+                            <img src="images/castor_sheppard.jpg" alt="Castor Sheppard profile picture" height="40" width="40" />
+                            <figcaption>
+                                <h3 class="username"><a href="about.html">Castor Sheppard</a></h3>
+                                <time datetime="3-18">March 18</time>
+                            </figcaption>
+                        </figure>
+                        <div class="category">Blue</div>
+                        <h4>Post title <span class="badge badge-secondary">New</span></h4>
+                        <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                            Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                        </div>
+                    </article>
+                    <article>
+                        <figure class="author">
+                            <img src="images/price_macias.jpg" alt="Price Macias profile picture" height="40" width="40" />
+                            <figcaption>
+                                <h3 class="username"><a href="about.html">Price Macias</a></h3>
+                                <time datetime="3-18">March 18</time>
+                            </figcaption>
+                        </figure>
+                        <div class="category">Blue</div>
+                        <h4>Post title</h4>
+                        <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                        </div>
+                    </article>
+                    <article>
+                        <figure class="author">
+                            <img src="images/lee_rasmussen.jpg" alt="Lee Rasmussen profile picture" height="40" width="40" />
+                            <figcaption>
+                                <h3 class="username"><a href="about.html">Lee Rasmussen</a></h3>
+                                <time datetime="3-18">March 18</time>
+                            </figcaption>
+                        </figure>
+                        <div class="category">Blue</div>
+                        <h4>Post title</h4>
+                        <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                            Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
+                            mattis.
+                            Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
+                            eleifend
+                            nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                        </div>
+                    </article>
                 </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/baxter_anthony.jpg" alt="Baxter Anthony profile picture" height="40" width="40"></img>
-                <figcaption>Baxter Anthony<br><time datetime="3-18">March 18</time></figcaption>
-                </figure>
-                <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
-                    mattis.
-                    Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
-                    eleifend
-                    nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+            <div class="bootstrap-cards">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/anthony_solomon.jpg" alt="Anthony Solomon profile picture" height="40" width="40"></img>
-                    <figcaption>Anthony Solomon<br><time datetime="3-18">March 18</time></figcaption>
-                </figure>
-                <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
-                    mattis.
-                    Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
-                    eleifend
-                    nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/octavius_barber.jpg" alt="Octavius Barber profile picture" height="40" width="40"></img>
-                <figcaption>Octavius Barber<br><time datetime="3-18">March 18</time></figcaption>
-                </figure>
-                <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
-                    mattis.
-                    Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
-                    eleifend
-                    nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/mason_dillon.jpg" alt="Mason Dillon profile picture" height="40" width="40"></img>
-                    <figcaption>Mason Dillon<br><time datetime="3-18">March 18</time></figcaption>
-                </figure>
-                <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
-                    mattis.
-                    Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
-                    eleifend
-                    nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/joel_barns.jpg" alt="Joel Barnes profile picture" height="40" width="40"></img>
-                    <figcaption>Joel Barnes<br><time datetime="3-18">March 18</time></figcaption>
-                </figure> 
-                <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
-                    mattis.
-                    Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
-                    eleifend
-                    nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/josiah_sears.jpg" alt="Josiah Sears profile picture" height="40" width="40"></img>
-                    <figcaption>Josiah Sears<br><time datetime="3-18">March 18</time></figcaption>
-                </figure> 
-                <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
-                    mattis.
-                    Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
-                    eleifend
-                    nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/castor_sheppard.jpg" alt="Castor Sheppard profile picture" height="40" width="40"></img>
-                <figcaption>Castor Sheppard<br><time datetime="3-18">March 18</time></figcaption>
-                </figure> 
-                <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
-                    mattis.
-                    Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
-                    eleifend
-                    nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
-                </div>
-            </article>
-            <article>
-                <figure>
-                    <img src="/img/price_macias.jpg" alt="Price Macias profile picture" height="40" width="40"></img>
-                    <figcaption>Price Macias<br><time datetime="3-18">March 18</time></figcaption>
-                </figure> 
-                <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
-                    mattis.
-                    Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
-                    eleifend
-                    nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
-                </div>
-            </article>
-            <article>
-                <figure><img src="/img/lee_rasmussen.jpg" alt="Lee Rasmussen profile picture" height="40" width="40"></img>
-                <figcaption>Lee Rasmussen<br><time datetime="3-18">March 18</time></figcaption>
-                </figure> 
-                <div>Duis rutrum porttitor velit, nec convallis mi maximus ut. Integer at odio eros. Mauris a orci non dolor feugiat
-                    mattis.
-                    Duis neque sem, faucibus a gravida vel, viverra sit amet dui. Nulla facilisi. Donec consectetur quam est, vel
-                    eleifend
-                    nulla tempus ut. Vestibulum id maximus lectus, in sollicitudin ligula.
-                </div>
-            </article>
-        </section>
-    </main>
+            </div>
+            </div>
+        </main>
+    </div>
     <footer>
-        <ul>
-            <li><a href="">Privacy</a></li>
-            <li><a href="">Impressum/Terms/NetzDG</a></li>
-            <li><a href="">Advertising</a></li>
-            <li><a href="">Ad Choices</a></li>
-            <li><a href="">Cookies</a></li>
-            <li><a href="">More</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li class="privacy"><a href="">Privacy</a></li>
+                <li class="cookies"><a href="">Cookies</a></li>
+                <!--phpstorm mi píše, že div ani span tu nejsou dovolené, co tam může být za tag nebo to mám udělat jinak?-->
+                <div class="hide show noMobile">
+                    <li><a href="">Impressum/Terms/NetzDG</a></li>
+                    <li><a href="">Advertising</a></li>
+                    <li><a href="">Ad Choices</a></li>
+                    <li><a href="">Cookies</a></li>
+                    <li><a href="">More</a></li>
+                </div>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>

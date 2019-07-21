@@ -1,0 +1,491 @@
+/******** MOBILE ********/
+/***** COMMON RULES *****/
+body {
+    background-color: #E9EBEE;
+    color: black;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+h2, h3 {
+    margin-top: 0;
+}
+
+/***** MAIN LAYOUT *****/
+.mainMenu {
+    height: 2.3rem;
+    align-items: center;
+    display: flex;
+}    
+
+.mainMenu .mobileLogo {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.5rem 0.5rem 0.5rem 7rem;
+}
+
+.mainMenu .mobileLogo:hover {
+    border: 1px solid black;
+}
+
+.logo {
+    display: none;
+}
+
+.mainMenu nav {
+padding-left: 1rem;
+}
+
+.mainMenu h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding-left: 2rem;
+}
+
+.mainMenu,
+.underImgMenu,
+footer,
+aside,
+#post-create-form,
+article,
+#profileCreateForm {
+    background: white;
+    border: 1px solid black;
+}
+
+.search .searchInput {
+    padding: 0.1rem 0.1rem;
+}
+
+.form-control {
+    height: auto;
+}
+
+/*** Když overiduju Bootstrap mám to dávat sem? Mám vytvořit nějaký další css soubor a importovat ho?
+ Mám overidovat id dropDownMenuLink nebo třídu .btn-secondary? ***/
+#dropdownMenuLink {
+    color: #4267B2;
+    background-color: white;
+    border: none;
+}
+
+.dropdown #dropdownMenuLink {
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.dropdown-menu .active {
+    background-color: #4267B2;
+}
+
+.dropdown-menu .hoverActive:hover {
+    background-color: #E0E3E6;
+}
+
+.underImgMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*** chtěla bych posunout ul(tu navigaci) na střed toho navu(pod obrázek), udělala sem to paddingem, můžu to nějak udělat flexboxem? ****/
+.underImgMenu ul {
+    justify-self: center;
+}
+
+.underImgMenu, footer {
+    height: 2.3rem;
+}
+
+.underImgMenu figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 1rem;
+    align-items: center;
+}
+
+/*** chtěla bych zarovnat odkaz privacy a cookies doleva, ale nejde to, jak to můžu udělat? Níže je pokus, ale asi nechápu úplně správně flexbox:/ ***/
+footer .privacy, footer .cookies {
+    justify-self: flex-start;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    display: flex; /* definuje flex kontejner */
+    flex-grow: 1; /* všechny děti mají stejné množství místa */
+    justify-content: flex-end; /* zarovná itemy na main axis, flex-end=doprava */
+    align-self: stretch; /* override align-items pro konkrétní item,
+                         zarovná itemy na cross-axis,
+                         strech znamená roztáhnout na celou výšku */
+    padding-right: 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    align-items: stretch; /* zarovná itemy na cross-axis, strech znamená roztáhnout na celou výšku */
+    font-size: 1.2rem;
+    margin: 0;
+    flex-direction: row; /* směr v jakým sou flex items zobrazený ve flex conteineru, row=zleva doprava  */
+}
+
+nav ul li {
+    padding: 0 1.5rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* zarovná itemy na main axis, center=na střed */
+}
+
+nav ul li.active {
+    background: #cccfd2;;
+}
+
+nav ul li:hover {
+    background: #e0e3e6;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4267B2;
+}
+
+a:hover {
+    text-decoration: none; /* když přidám Bootstrap, přidá mi podtžítka, tohle je smaže */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about {
+    margin-top: 2rem;
+}
+
+.profileAside {
+    margin: 1rem;
+    padding: 1rem;
+    min-width: 15rem;
+}
+
+.hpAside {
+    min-width: 15rem;
+    margin: 1rem;
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.coverImgFig {
+    margin: 0;
+}
+
+.coverImg {
+    height: 167px;
+    width: 450px;
+    margin: 0 auto;
+    display: block;
+}
+
+nav[aria-label="breadcrumb"] {
+    justify-content: flex-start;
+}
+
+.breadcrumb-item a {
+    color: #4267B2;
+}
+
+.breadcrumb-item a:hover {
+    color: #3B5CA0;
+}
+/***** CREATE POST, CREATE PROFILE *****/
+#postCreateForm,
+#profileCreateForm {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#postCreateForm .field,
+#profileCreateForm {
+    margin-bottom: 0.8rem;
+}
+
+#postCreateForm .field input,
+#postCreateForm .field textarea,
+#profileCreateForm .field input,
+#profileCreateForm .field textarea,
+#profileCreateForm .field select {
+    display: inline-block;
+    width: 60%;
+}
+
+.field label input#gryffindor,
+.field label input#ravenclaw,
+.field label input#slytherin,
+.field label input#hufflepuff {
+    width: 70%;
+}
+
+#postCreateForm label,
+#profileCreateForm label {
+    display: inline-block;
+    width: 10rem;
+}
+
+#postCreateForm .post {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#postCreateForm .post figure {
+    margin: 0 7.8rem 0 0;
+}
+
+.jumbotron .btn-primary,
+#postCreateForm .btn-primary,
+#profileCreateForm .btn-primary,
+.card-body .btn-primary {
+    background-color: #4267B2;
+    border-color: #4267B2;
+}
+
+.jumbotron .btn-primary:hover,
+#postCreateForm .btn-primary:hover,
+#profileCreateForm .btn-primary:hover,
+.card-body .btn-primary:hover {
+    background-color: #3B5CA0;
+}
+
+#profileCreateForm .alert-success {
+    margin: 1rem 1rem 1rem 0;
+}
+
+#postCreateForm .alert-danger {
+    margin: 1rem 1rem 1rem 0;
+}
+/***** MAIN CONTENT *****/
+
+article {
+    text-align: justify;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+article .category {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+article h4 {
+    display: flex;
+    flex-direction: row;
+}
+
+article h4 span {
+    margin-left: 0.5rem;
+}
+
+/*** overide bootstrapu, je to takto ok? ***/
+.badge-secondary {
+    background-color: #4267B2;
+}
+
+.author {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0;
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    white-space: nowrap;
+    padding-left: 0.5rem;
+}
+
+figcaption a:hover {
+    color: #878a8d;
+}
+
+h1 a:hover {
+    color: white;
+}
+
+figcaption a, h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+figcaption time {
+    opacity: 0.7;
+    align-self: flex-start;
+}
+
+.author figcaption h3 {
+    margin: 0;
+}
+
+.card {
+    margin: 1rem ;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+/***** HIDE/SHOW MENU ITEMS *****/
+
+.hide {
+    display: none;
+}
+/******** TABLETS, STANDART LAPTOPS, BIG SCREENS ********/
+@media only screen and (min-width: 768px) {
+/***** COMMON RULES *****/
+body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+/***** MAIN LAYOUT *****/
+.mainMenu {
+    background: #4267B2;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.mainMenu .logo {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.8rem 0.8rem 0.8rem 9rem;
+    display: block;
+}
+
+.mainMenu .logo:hover {
+    border: 1px solid black;
+}
+
+.mainMenu nav {
+    padding-left: 0;
+}
+
+.mobileLogo {
+    display: none;
+}
+
+.mainMenu nav ul li:hover {
+    background: #3B5CA0;
+}
+
+.mainMenu nav ul li a {
+    color: #ffffff;
+}
+
+.underImgMenu, footer {
+    height: 3rem;
+}
+
+.underImgMenu ul {
+    padding-right: 20rem;
+}
+
+.underImgMenu ul div {
+    display: flex;
+    flex-direction: row;
+}
+
+.underImgMenu .noMobile,
+footer .noMobile {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li.active {
+    background: #3B5CA0;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+}
+
+.profileAside {
+    margin: 2rem;
+    padding: 2rem;
+    min-width: 15rem;
+}
+
+.hpAside {
+    margin: 2rem;
+}
+
+.coverImgFig {
+    margin-top: 3rem;
+}
+
+.coverImg {
+    height: 315px;
+    width: 851px;
+}
+
+/***** CREATE POST, CREATE PROFILE *****/
+#postCreateForm,
+#profileCreateForm {
+    padding: 2rem;
+    margin: 2rem;
+}
+
+#profileCreateForm .alert-success {
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    width: 60%;
+}
+
+/*** jak nastylovat ten alert, aby kopíroval svou šířkou přesně label s inputem nad ním při různých velikostech zobrazení browseru? ***/
+#postCreateForm .alert-danger {
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    width: 79.5%;
+}
+
+/***** MAIN CONTENT *****/
+article {
+    padding: 2rem;
+    margin: 2rem;
+}
+
+article h4 span {
+    margin-left: 0.3rem;
+}
+
+article .category {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.card {
+    margin: 1rem 2rem 2rem 2rem ;
+    padding: 2rem;
+    border: 1px solid black;
+}
+
+/***** SHOW ELEMENTS *****/
+
+.show {
+    display: block;
+}
+

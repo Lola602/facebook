@@ -1,0 +1,189 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Simple facebook</title>
+    <meta name="description" content="Simple facebook">
+    <meta name="author" content="Šárka Řezáčová">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.js">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+    <div class="mainMenu">
+        <h1 class="hide show"><a href="index.html">Facebook</a></h1>
+        <a href="index.html"><img class="logo" src="images/logo.svg" alt="Facebook logo" /></a>
+        <a href="index.html"><img class="mobileLogo" src="images/logo_mobile.svg" alt="Facebook logo mobile" /></a>
+        <form class="form-inline my-2 my-lg-0 search">
+            <input class="form-control mr-sm-2 searchInput" type="search" placeholder="Search" aria-label="Search">
+        </form>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <figure class="coverImgFig">
+        <img class="coverImg" src="images/cover_img.jpg" alt="Cover image" />
+    </figure>
+    <nav class="underImgMenu">
+        <figure>
+            <img src="images/wesley_finch.jpg" alt="Wesley Finch" width="30" height="30" />
+            <figcaption><a href="about.html">Wesley Finch</a></figcaption>
+        </figure>
+        <ul>
+            <li class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Timeline
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item hoverActive" href="#">Action</a>
+                    <a class="dropdown-item active" href="#">Another action</a>
+                    <a class="dropdown-item disabled" href="#">Something else here</a>
+                </div>
+            </li>
+            <li><a href="">Create</a></li>
+            <li><a href="">Friends</a></li>
+                <div class="hide show noMobile">
+                    <li><a href="">Photos</a></li>
+                    <li><a href="">Archive</a></li>
+                    <li><a href="">More</a></li>
+                </div>
+        </ul>
+    </nav>
+    </header>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About</li>
+        </ol>
+    </nav>
+    <div class="content about">
+        <main>
+            <section>
+                <form id="profileCreateForm" action="" method="post">
+                    <h2>Edit info about you</h2>
+                    <div class="field">
+                        <label for="fullName">Add a full name:</label><input id="fullName" type="text" name="fullName" value="Wesley Finch">
+                    </div>
+                    <div class="field">
+                        <label for="img">Add a profile image:</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupFileAddon01">Img</span>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="img">Add a cover image:</label><input type="file" name="img" id="img" />
+                    </div>
+                    <div class="field">
+                        <label for="bio">Add something about you:</label><textarea id="bio" rows="5" cols="50" name="bio"
+                        placeholder="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et"></textarea>
+                    </div>
+                    <div class="field">
+                        <label for="currentCity">Add place where you live:</label><input id="currentCity" type="text" name="currentCity"
+                        value="Tregaron">
+                    </div>
+                    <div class="field">
+                    <label for="company">Add a company:</label>
+                        <!--na mobilu se ukazuje input o pixel vpravo, než ostatní inputy-->
+                        <input id="company" type="text" name="company" value="Urna Industries">
+                    </div>
+                    <div class="field">
+                        <div class="radioFormCollege">Add a college:</div>
+                        <label for="gryffindor"><input id="gryffindor" type="radio" name="college" value="gryffindor" checked>Gryffindor</label>
+                        <label for="ravenclaw"><input id="ravenclaw" type="radio" name="college" value="ravenclaw">Ravenclaw</label>
+                        <label for="slytherin"><input id="slytherin" type="radio" name="college" value="slytherin">Slytherin</label>
+                        <label for="hufflepuff"><input id="hufflepuff" type="radio" name="college" value="hufflepuff">Hufflepuff</label>
+                    </div>
+                    <div class="field">
+                        <label for="hometown">Add hometown:</label>
+                        <select class="custom-select custom-select-lg mb-3" id="hometown" name="hometown">
+                            <option value="montauban" selected>Montauban</option>
+                            <option value="st_albans">St. Albans</option>
+                            <option value="alhue">Alhué</option>
+                            <option value="diegem">Diegem</option>
+                            <option value="castelluccio_valmaggiore">Castelluccio Valmaggiore</option>
+                            <option value="surrey">Surrey</option>
+                            <option value="le_mans">Le Mans</option>
+                            <option value="glendon">Glendon</option>
+                            <option value="rutigliano">Rutigliano</option>
+                            <option value="olen">Olen</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="relationshipStatus">Add your relationship status:</label><input id="relationshipStatus" type="text"
+                            name="relationshipStatus" value="single">
+                    </div>
+                    <div class="field">
+                        <label for="dateOfBirth">Add your date of birth:</label><input id="dateOfBirth" type="date"
+                        name="dateOfBirth" value="1986-07-03">
+                    </div>
+                    <div class="field">
+                        <label for="emailAddress">Add your email address:</label><input id="emailAddress" type="email" name="emailAddress" value="lola@email.cz">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="field">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Change your password:</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Add your new password again:</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Well done!</h4>
+                            <p>You changed your password.</p>
+                        </div>
+                    </div>
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                </form>
+            </section>
+        </main>
+        <aside class="profileAside">
+            <section>
+                <h2>Intro</h2>
+                <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum
+                    sociis
+                    natoque penatibus et
+                </div>
+                <div>Now I live in Tregaron.</div>
+                <div>I work at Urna Industries.</div>
+                <div>I studied at Gryffindor college.</div>
+                <div>I was born in Montauban at 3 July 1986.</div>
+                <div>I am single.</div>
+                <div>My email address is lola@email.cz.</div>
+            </section>
+        </aside>
+    </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Cookies</a></li>
+                <div class="hide show noMobile">
+                    <li><a href="">Impressum/Terms/NetzDG</a></li>
+                    <li><a href="">Advertising</a></li>
+                    <li><a href="">Ad Choices</a></li>
+                    <li><a href="">Cookies</a></li>
+                    <li><a href="">More</a></li>
+                </div>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
