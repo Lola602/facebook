@@ -19,11 +19,9 @@
         <h1 class="hide show"><a href="index.html">Facebook</a></h1>
         <a href="index.html"><img class="logo" src="images/logo.svg" alt="Facebook logo" /></a>
         <a href="index.html"><img class="mobileLogo" src="images/logo_mobile.svg" alt="Facebook logo mobile" /></a>
-        <div class="search">
-            <form>
-                <input placeholder="Search"></input>
-            </form>
-        </div>
+        <form class="form-inline my-2 my-lg-0 search">
+            <input class="form-control mr-sm-2 searchInput" type="search" placeholder="Search" aria-label="Search">
+        </form>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -40,7 +38,17 @@
             <figcaption><a href="about.html">Wesley Finch</a></figcaption>
         </figure>
         <ul>
-            <li><a href="">Timeline</a></li>
+            <li class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Timeline
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item hoverActive" href="#">Action</a>
+                    <a class="dropdown-item active" href="#">Another action</a>
+                    <a class="dropdown-item disabled" href="#">Something else here</a>
+                </div>
+            </li>
             <li><a href="">Create</a></li>
             <li><a href="">Friends</a></li>
                 <div class="hide show noMobile">
@@ -51,7 +59,13 @@
         </ul>
     </nav>
     </header>
-    <div class="content">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About</li>
+        </ol>
+    </nav>
+    <div class="content about">
         <main>
             <section>
                 <form id="profileCreateForm" action="" method="post">
@@ -60,7 +74,16 @@
                         <label for="fullName">Add a full name:</label><input id="fullName" type="text" name="fullName" value="Wesley Finch">
                     </div>
                     <div class="field">
-                        <label for="img">Add a profile image:</label><input type="file" name="img" id="img" />
+                        <label for="img">Add a profile image:</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="inputGroupFileAddon01">Img</span>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                <label class="custom-file-label" for="inputGroupFile01"></label>
+                            </div>
+                        </div>
                     </div>
                     <div class="field">
                         <label for="img">Add a cover image:</label><input type="file" name="img" id="img" />
@@ -87,7 +110,7 @@
                     </div>
                     <div class="field">
                         <label for="hometown">Add hometown:</label>
-                        <select id="hometown" name="hometown">
+                        <select class="custom-select custom-select-lg mb-3" id="hometown" name="hometown">
                             <option value="montauban" selected>Montauban</option>
                             <option value="st_albans">St. Albans</option>
                             <option value="alhue">Alhué</option>
@@ -110,12 +133,17 @@
                     </div>
                     <div class="field">
                         <label for="emailAddress">Add your email address:</label><input id="emailAddress" type="email" name="emailAddress" value="lola@email.cz">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <div class="field">
-                        <label for="changePassword">Change your password:</label><input id="changePassword" type="password" name="changePassword" value="">
-                    </div>
-                    <div class="field">
-                        <label for="confirmPassword">Add your new password again:</label><input id="confirmPassword" type="password" name="confirmPassword" value="">
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Change your password:</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Add your new password again:</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
                         <div class="alert alert-success" role="alert">
                             <h4 class="alert-heading">Well done!</h4>
                             <p>You changed your password.</p>

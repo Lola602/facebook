@@ -20,11 +20,9 @@
             <h1 class="hide show"><a href="index.html">Facebook</a></h1>
             <a href="index.html"><img class="logo" src="images/logo.svg" alt="Facebook logo" /></a>
             <a href="index.html"><img class="mobileLogo" src="images/logo_mobile.svg" alt="Facebook logo mobile" /></a>
-            <div class="search">
-                <form>
-                    <input placeholder="Search"></input>
-                </form>
-            </div>
+            <form class="form-inline my-2 my-lg-0 search">
+                <input class="form-control mr-sm-2 searchInput" type="search" placeholder="Search" aria-label="Search">
+            </form>
             <nav>
                 <ul>
                     <li class="active"><a href="index.html">Home</a></li>
@@ -41,7 +39,17 @@
                 <figcaption><a href="about.html">Wesley Finch</a></figcaption>
             </figure>
             <ul>
-                <li><a href="">Timeline</a></li>
+                <li class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Timeline
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item hoverActive" href="#">Action</a>
+                        <a class="dropdown-item active" href="#">Another action</a>
+                        <a class="dropdown-item disabled" href="#">Something else here</a>
+                    </div>
+                </li>
                 <li><a href="">Create</a></li>
                 <li><a href="">Friends</a></li>
                 <div class="hide show noMobile">
@@ -59,9 +67,13 @@
     </nav>
     <div class="content">
         <aside class="hpAside">
-                <section>
-                    <div>Reklama</div>
-                </section>
+            <div class="jumbotron">
+                <h1 class="display-4">Hello, world!</h1>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </div>
         </aside>
         <main>
             <div class="timeline">

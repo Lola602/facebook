@@ -54,6 +54,35 @@ article,
     border: 1px solid black;
 }
 
+.search .searchInput {
+    padding: 0.1rem 0.1rem;
+}
+
+.form-control {
+    height: auto;
+}
+
+/*** Když overiduju Bootstrap mám to dávat sem? Mám vytvořit nějaký další css soubor a importovat ho?
+ Mám overidovat id dropDownMenuLink nebo třídu .btn-secondary? ***/
+#dropdownMenuLink {
+    color: #4267B2;
+    background-color: white;
+    border: none;
+}
+
+.dropdown #dropdownMenuLink {
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.dropdown-menu .active {
+    background-color: #4267B2;
+}
+
+.dropdown-menu .hoverActive:hover {
+    background-color: #E0E3E6;
+}
+
 .underImgMenu {
     display: flex;
     flex-direction: row;
@@ -138,11 +167,23 @@ a:hover {
     flex-direction: column;
 }
 
-.hpAside,
+.about {
+    margin-top: 2rem;
+}
+
 .profileAside {
     margin: 1rem;
     padding: 1rem;
     min-width: 15rem;
+}
+
+.hpAside {
+    min-width: 15rem;
+    margin: 1rem;
+}
+
+.jumbotron {
+    background-color: white;
 }
 
 .coverImgFig {
@@ -212,6 +253,7 @@ nav[aria-label="breadcrumb"] {
     margin: 0 7.8rem 0 0;
 }
 
+.jumbotron .btn-primary,
 #postCreateForm .btn-primary,
 #profileCreateForm .btn-primary,
 .card-body .btn-primary {
@@ -219,6 +261,7 @@ nav[aria-label="breadcrumb"] {
     border-color: #4267B2;
 }
 
+.jumbotron .btn-primary:hover,
 #postCreateForm .btn-primary:hover,
 #profileCreateForm .btn-primary:hover,
 .card-body .btn-primary:hover {
@@ -382,11 +425,14 @@ nav ul li.active {
     flex-direction: row;
 }
 
-.hpAside,
 .profileAside {
     margin: 2rem;
     padding: 2rem;
     min-width: 15rem;
+}
+
+.hpAside {
+    margin: 2rem;
 }
 
 .coverImgFig {
